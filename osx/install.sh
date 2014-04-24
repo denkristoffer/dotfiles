@@ -271,7 +271,7 @@ sudo mdutil -E / > /dev/null
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
+#defaults write com.apple.terminal StringEncodings -array 4
 
 ###############################################################################
 # Time Machine                                                                #
@@ -331,7 +331,7 @@ defaults write com.google.Chrome ExtensionInstallSources -array "https://github.
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-    "Terminal" "iCal"; do
+    "iCal"; do
     killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
