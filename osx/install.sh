@@ -321,8 +321,8 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
-# Allow installing user scripts via GitHub Gist or Userscripts.org
-defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+# Allow installing user scripts via GitHub, Gists or Userscripts.org
+defaults write com.google.Chrome ExtensionInstallSources -array "https://github.com/*" "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
 
 ###############################################################################
