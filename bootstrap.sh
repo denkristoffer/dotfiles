@@ -104,5 +104,11 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 install_dotfiles
 
-# find the installers and run them iteratively
+# Install Homebrew first, as it's needed for almost everything else
+sh -c homebrew/install.sh
+
+# Find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+echo ''
+echo '  All done!'
