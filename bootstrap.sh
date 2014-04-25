@@ -104,7 +104,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo ''
 
 # Install Homebrew first, as it's needed for almost everything else
-#homebrew/install.sh 2>&1
+homebrew/install.sh 2>&1
 
 install_dotfiles
 
