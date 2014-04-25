@@ -99,10 +99,10 @@ install_dotfiles () {
 # Install Homebrew first, as it's needed for almost everything else
 homebrew/install.sh 2>&1
 
+install_dotfiles
+
 # Find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
-
-install_dotfiles
 
 echo ''
 echo '  Done.'
