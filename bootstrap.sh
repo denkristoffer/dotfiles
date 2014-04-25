@@ -37,7 +37,7 @@ install_dotfiles () {
 
   for source in $(find "$DOTFILES_DIR" -maxdepth 2 -name \*.symlink)
   do
-    dest="$HOME/.$(basename \""${source%.*}"\")"
+    dest="$HOME/.$(basename \"${source%.*}\")"
 
     if [ -f "$dest" ] || [ -d "$dest" ]
     then
