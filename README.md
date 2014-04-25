@@ -1,7 +1,8 @@
-dotfiles
-========
+# dotfiles
 
 Dotfiles to set up an OS X development environment to my liking.
+
+Install with `./bootstrap.sh`
 
 Based on/stolen from:
 
