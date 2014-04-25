@@ -24,7 +24,7 @@ success () {
 # }
 
 link_files () {
-  ln -s $1 $2
+  ln -s "$1" "$2"
   success "linked $1 to $2"
 }
 
@@ -83,13 +83,13 @@ install_dotfiles () {
 
       if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
       then
-        link_files $source $dest
+        link_files "$source" "$dest"
       else
         success "skipped $source"
       fi
 
     else
-      link_files $source $dest
+      link_files "$source" "$dest"
     fi
 
   done
