@@ -104,7 +104,7 @@ sudo -v
 echo ''
 
 # Install Homebrew first, as it's needed for almost everything else
-homebrew/install.sh 2>&1
+homebrew/install.sh
 
 install_dotfiles
 
