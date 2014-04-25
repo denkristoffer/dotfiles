@@ -2,5 +2,7 @@
 #
 # Install Git
 
-echo "  Installing git for you."
-brew install git > /tmp/git-install.log
+if [ "$(which git)" != '/usr/local/bin/git' ]; then
+  echo "  Installing Git for you."
+  brew install git > /tmp/git-install.log
+fi
