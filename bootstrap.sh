@@ -26,7 +26,7 @@ success () {
 # }
 
 link_files () {
-  ln -s $1 $2
+  ln -s "$1" "$2"
   success "linked $1 to $2"
 }
 
@@ -37,9 +37,9 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
-  for source in `find $DOTFILES_DIR -maxdepth 2 -name \*.symlink`
+  for source in $(find "$DOTFILES_DIR" -maxdepth 2 -name \*.symlink)
   do
-    dest="$HOME/.`basename \"${source%.*}\"`"
+    dest="$HOME/.$(basename \""${source%.*}"\")"
 
     if [ -f "$dest" ] || [ -d "$dest" ]
     then
@@ -50,7 +50,7 @@ install_dotfiles () {
 
       if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
       then
-        user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        user "File already exists: $(basename "$source"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
