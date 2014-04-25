@@ -13,4 +13,4 @@ fi
 curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log
 
 # Symlink kristoffer.zsh-theme to $HOME/.oh-my-zsh/themes/
-link_files kristoffer.zsh-theme $HOME/.oh-my-zsh/themes/kristoffer.zsh-theme
+ln -s kristoffer.zsh-theme $HOME/.oh-my-zsh/themes/kristoffer.zsh-theme
