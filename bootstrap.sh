@@ -109,7 +109,7 @@ homebrew/install.sh
 install_dotfiles
 
 # Find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find . -name install.sh | while read installer ; do sudo sh -c "${installer}" ; done
 
 # Run OS X system setup file last
 osx/system-setup.sh
