@@ -106,10 +106,10 @@ echo ''
 # Install Homebrew first, as it's needed for almost everything else
 homebrew/install.sh
 
-install_dotfiles
-
 # Find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+
+install_dotfiles
 
 # Run OS X system setup file last
 sudo osx/system-setup.sh
