@@ -11,9 +11,4 @@ if [[ -e /usr/local/share/chruby ]]; then
     fi
 fi
 
-# This is "cleaner" since it doesn't mess up for utils that use the default builds
-# However it makes CLI git use the Xcode version, so it's commented out for now
-# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-# alias git='/usr/local/bin/git'
-
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
