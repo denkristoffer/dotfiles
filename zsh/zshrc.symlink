@@ -10,5 +10,7 @@ plugins=(git history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
+export LANG=da_DK.UTF-8
+
 # Load z
 . `brew --prefix`/etc/profile.d/z.sh
