@@ -1,2 +1,10 @@
 .DS_Store
 *~
+vendor/bundle
+.ssh/
+!.ssh/*.pub
+!.ssh/config
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
