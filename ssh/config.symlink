@@ -1,0 +1,11 @@
+Host nas
+    HostName nas.local
+    Port 45
+    User kristoffer
+    IdentityFile ~/.ssh/nas
+
+Host box
+    HostName 195.154.78.56
+    Port 21942
+    User seed
+    IdentityFile ~/.ssh/box

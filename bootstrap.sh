@@ -23,32 +23,28 @@ success () {
 #   exit
 # }
 
-link_files () {
-  ln -s "$1" "$2"
-  success "linked $1 to $2"
-}
+link_file () {
+  local src=$1 dst=$2
 
-install_dotfiles () {
-  info 'installing dotfiles'
+  local overwrite= backup= skip=
+  local action=
 
-  overwrite_all=false
-  backup_all=false
-  skip_all=false
+  if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
+  then
 
-  for source in $(find "$DOTFILES_DIR" -maxdepth 2 -name \*.symlink)
-  do
-    dest="$HOME/.$(basename "${source%.*}")"
-
-    if [ -f "$dest" ] || [ -d "$dest" ]
+    if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
 
-      overwrite=false
-      backup=false
-      skip=false
+      local currentSrc="$(readlink $dst)"
 
-      if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
+      if [ "$currentSrc" == "$src" ]
       then
-        user "File already exists: $(basename "$source"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+
+        skip=true;
+
+      else
+
+        user "File already exists: $(basename "$src"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
@@ -67,31 +63,49 @@ install_dotfiles () {
           * )
             ;;
         esac
+
       fi
 
-      if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
-      then
-        rm -rf "$dest"
-        success "removed $dest"
-      fi
-
-      if [ "$backup" == "true" ] || [ "$backup_all" == "true" ]
-      then
-        mv "$dest" "$dest"\.backup
-        success "moved $dest to $dest.backup"
-      fi
-
-      if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
-      then
-        link_files "$source" "$dest"
-      else
-        success "skipped $source"
-      fi
-
-    else
-      link_files "$source" "$dest"
     fi
 
+    overwrite=${overwrite:-$overwrite_all}
+    backup=${backup:-$backup_all}
+    skip=${skip:-$skip_all}
+
+    if [ "$overwrite" == "true" ]
+    then
+      rm -rf "$dst"
+      success "removed $dst"
+    fi
+
+    if [ "$backup" == "true" ]
+    then
+      mv "$dst" "${dst}.backup"
+      success "moved $dst to ${dst}.backup"
+    fi
+
+    if [ "$skip" == "true" ]
+    then
+      success "skipped $src"
+    fi
+  fi
+
+  if [ "$skip" != "true" ]  # "false" or empty
+  then
+    ln -s "$1" "$2"
+    success "linked $1 to $2"
+  fi
+}
+
+install_dotfiles () {
+  info 'installing dotfiles'
+
+  local overwrite_all=false backup_all=false skip_all=false
+
+  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink')
+  do
+    dst="$HOME/.$(basename "${src%.*}")"
+    link_file "$src" "$dst"
   done
 }
 
