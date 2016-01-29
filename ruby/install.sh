@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Install Chruby and ruby-install
+# Install chruby and ruby-install
 
 if test ! $(which chruby)
 then
@@ -13,3 +13,8 @@ then
   printf "\n  Installing ruby-install for you.\n"
   brew install ruby-install > /tmp/ruby-install-install.log
 fi
+
+# Install latest stable version of Ruby
+printf "\n  Installing Ruby $VERSION for you.\n"
+ruby-install --latest
+ruby-install --cleanup --no-reinstall ruby $VERSION &> /tmp/ruby-install.log
