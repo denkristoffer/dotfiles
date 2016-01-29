@@ -1,0 +1,27 @@
+[storage]
+engine = dropbox
+directory = Apps
+
+[applications_to_sync]
+bartender
+bundler
+flux
+git
+hazel
+iterm2
+littlesnitch
+mackup
+macosx
+messages
+mpv
+oh-my-zsh
+pow
+quicklook
+ruby
+ruby-version
+seil
+sublime-text-3
+transmit
+viscosity
+z
+zsh
