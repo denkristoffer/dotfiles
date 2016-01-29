@@ -5,7 +5,7 @@
 # Check for zsh
 if test ! $(which zsh)
 then
-  echo "  Installing zsh for you."
+  printf "\n  Installing zsh for you.\n"
   brew install zsh > /tmp/zsh-install.log
 fi
 

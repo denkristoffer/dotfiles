@@ -5,7 +5,7 @@
 # Check for mpv
 if test ! $(which mpv)
 then
-  echo "  Installing mpv for you."
   brew tap mpv-player/mpv
   brew install --with-libbluray mpv > /tmp/mpv-install.log
+  printf "\n  Installing mpv for you.\n"
 fi

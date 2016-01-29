@@ -2,8 +2,8 @@
 #
 # Install pow
 
-echo "  Installing pow for you."
-brew install pow > /tmp/pow-install.log
+    printf "\n  Installing pow for you.\n"
+    brew install pow > /tmp/pow-install.log
 
 # Create the required host directories:
 mkdir -p ~/Library/Application\\ Support/Pow/Hosts

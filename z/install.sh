@@ -5,6 +5,6 @@
 # Check for z
 if test ! $(which z)
 then
-  echo "  Installing z for you."
+  printf "\n  Installing z for you.\n"
   brew install z > /tmp/z-install.log
 fi

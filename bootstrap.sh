@@ -115,7 +115,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo ''
+printf ''
 
 # Install Homebrew first, as it's needed for almost everything else
 homebrew/install.sh
@@ -128,5 +128,4 @@ install_dotfiles
 # Run OS X system setup file last
 sudo osx/system-setup.sh
 
-echo ''
-echo '  Done.'
+printf "\n  Done."
