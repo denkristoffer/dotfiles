@@ -5,9 +5,9 @@ directory = Apps
 [applications_to_sync]
 bartender
 bundler
+controlplane
 flux
 git
-hazel
 iterm2
 littlesnitch
 mackup
@@ -15,7 +15,6 @@ macosx
 messages
 mpv
 oh-my-zsh
-pow
 quicklook
 ruby
 ruby-version
