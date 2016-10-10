@@ -126,6 +126,6 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 install_dotfiles
 
 # Run OS X system setup file last
-sudo osx/system-setup.sh
+#sudo sh -c macos/system-setup.sh
 
 printf "\n  Done."
