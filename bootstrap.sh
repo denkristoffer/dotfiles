@@ -128,6 +128,6 @@ install_dotfiles
 mackup restore
 
 # Run OS X system setup file last
-#sudo sh -c macos/system-setup.sh
+sudo sh -c macos/system-setup.sh
 
 printf "\n  Done."
