@@ -1,6 +1,6 @@
 [storage]
-engine = dropbox
-directory = Apps
+engine = icloud
+directory = Apps/Mackup
 
 [applications_to_sync]
 bartender
