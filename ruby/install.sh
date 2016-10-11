@@ -16,5 +16,4 @@ fi
 
 # Install latest stable version of Ruby
 printf "\n  Installing Ruby $VERSION for you.\n"
-ruby-install --latest
-ruby-install --cleanup --no-reinstall ruby $VERSION &> /tmp/ruby-install.log
+ruby-install --latest --cleanup --no-reinstall ruby $VERSION &> /tmp/ruby-install.log
