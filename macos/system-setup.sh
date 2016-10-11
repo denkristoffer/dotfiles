@@ -24,42 +24,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Finder                                                                      #
 ###############################################################################
 
-# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
-
-# Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Finder: show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
-# Finder: show path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
 # Show the ~/Library folder
 chflags nohidden ~/Library
-
-###############################################################################
-# Dock, Dashboard                                                             #
-###############################################################################
-
-# Wipe all (default) app icons from the Dock
-defaults write com.apple.dock persistent-apps -array
-
-# Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -150,21 +116,10 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
-# Transmission.app                                                            #
-###############################################################################
-
-# IP block list.
-# Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
-defaults write org.m0k.transmission BlocklistNew -bool true
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "cfprefsd" "Dock" "Finder" "Photos" "Safari" "SystemUIServer" "Terminal" \
-    "Transmission"; do
+for app in "cfprefsd" "Dock" "Finder" "Photos" "Safari" "SystemUIServer" "Terminal"; do
     killall "${app}" &> /dev/null
 done
 printf "\n  Done. Note that some of these changes require a logout/restart to take effect."
