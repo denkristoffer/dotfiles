@@ -98,7 +98,7 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles'
+  info 'installing dotfiles\n'
 
   local overwrite_all=false backup_all=false skip_all=false
 
@@ -125,7 +125,7 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 install_dotfiles
 
-mackup restore
+#mackup restore
 
 # Run OS X system setup file last
 sudo sh -c macos/system-setup.sh
