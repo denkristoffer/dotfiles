@@ -2,7 +2,7 @@
 #
 # Install chruby and ruby-install
 
-if test ! $(which chruby)
+if ! [[ -e /usr/local/share/chruby ]]
 then
   printf "\n  Installing chruby for you.\n"
   brew install chruby > /tmp/chruby-install.log
