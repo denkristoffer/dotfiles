@@ -2,6 +2,7 @@
 #
 # Set up zsh and oh-my-zsh
 
+printf "\n› Setting up zsh\n"
 # Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log
 
