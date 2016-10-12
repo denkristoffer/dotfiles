@@ -5,7 +5,11 @@
 if test ! $(which node)
 then
   printf "\n› Installing Node\n"
+
+  # Finish nvm setup
+  mkdir $HOME/.nvm
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+  . "$(brew --prefix nvm)/nvm.sh"
+  
   nvm install node > /tmp/node-install.log
 fi
