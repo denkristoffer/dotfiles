@@ -120,6 +120,10 @@ printf ''
 # Install Homebrew first, as it's needed for almost everything else
 homebrew/install.sh
 
+# Homebrew install
+printf "› brew bundle\n"
+brew bundle
+
 # Find the installers and run them one at a time
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
