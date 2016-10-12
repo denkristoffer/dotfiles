@@ -1,13 +1,6 @@
 #!/bin/sh
 #
-# Install zsh and oh-my-zsh
-
-# Check for zsh
-if test ! $(which zsh)
-then
-  printf "\n  Installing zsh for you.\n"
-  brew install zsh > /tmp/zsh-install.log
-fi
+# Set up zsh and oh-my-zsh
 
 # Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log

@@ -2,7 +2,6 @@
 #
 # Install mpv
 
-# Check for mpv
 if test ! $(which mpv)
 then
   printf "\n  Installing mpv for you.\n"
