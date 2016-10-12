@@ -5,11 +5,11 @@ DOTFILES_DIR="$(pwd)"
 set -e
 
 info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
 
 user () {
-  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
 success () {
@@ -44,7 +44,8 @@ link_file () {
 
       else
 
-        user "File already exists: $(basename "$src"), what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
+        [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
         read -n 1 action
 
         case "$action" in
@@ -98,11 +99,11 @@ link_file () {
 }
 
 install_dotfiles () {
-  info 'installing dotfiles\n'
+  info '\n› Installing dotfiles\n'
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink')
+  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
@@ -117,21 +118,21 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 printf ''
 
+install_dotfiles
+
 # Install Homebrew first, as it's needed for almost everything else
 homebrew/install.sh
 
 # Homebrew install
-printf "› brew bundle\n"
+printf "\n› brew bundle\n"
 brew bundle
 
 # Find the installers and run them one at a time
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
-install_dotfiles
-
 #mackup restore
 
 # Run OS X system setup file last
-sudo sh -c macos/system-setup.sh
+# sudo sh -c macos/system-setup.sh
 
-printf "\n  Done."
+printf "\n› Done\n"
