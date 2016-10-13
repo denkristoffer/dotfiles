@@ -12,9 +12,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
 # Enable Safari Develop Menu and Web Inspector
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
