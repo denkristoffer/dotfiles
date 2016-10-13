@@ -15,7 +15,7 @@ cp "$(pwd)/zsh/kristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/kristoffer.zsh-the
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
 # typeset -U config_files
-config_files=($(pwd)/**/*.zsh)
+config_files=($(dirname pwd)/**/*.zsh)
 
 for file in ${config_files}
 do
