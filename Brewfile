@@ -67,7 +67,7 @@ cask 'xld'
 # mas 'Yoink', id: 457622435
 
 # QuickLook plugins
-cask 'qlcolorcode'
+# cask 'qlcolorcode'
 cask 'qlimagesize'
 cask 'qlmarkdown'
 cask 'qlstephen'
