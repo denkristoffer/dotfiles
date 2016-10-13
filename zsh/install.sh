@@ -5,7 +5,7 @@
 printf "\n› Setting up zsh\n"
 
 sudo echo "/usr/local/bin/zsh\n" >> /etc/shells
-# chsh -s /usr/local/bin/zsh
+chsh -s /usr/local/bin/zsh
 
 # Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log
