@@ -130,8 +130,6 @@ brew bundle
 # Find the installers and run them one at a time
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
-#mackup restore
-
 # Run OS X system setup file last
 # sudo sh -c macos/system-setup.sh
 
