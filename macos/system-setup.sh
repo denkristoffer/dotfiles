@@ -10,26 +10,14 @@ osascript -e 'tell application "System Preferences" to quit'
 # See https://github.com/mathiasbynens/dotfiles/issues/237
 echo "0x08000100:0" > ~/.CFUserTextEncoding
 
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-###############################################################################
-# Finder                                                                      #
-###############################################################################
-
 # Show the ~/Library folder
 chflags nohidden ~/Library
-
-###############################################################################
-# Safari & WebKit                                                             #
-###############################################################################
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -83,10 +71,6 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
-###############################################################################
-# Mac App Store                                                               #
-###############################################################################
-
 # Enable the automatic update check
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 
@@ -105,21 +89,7 @@ defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 1
 # Turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
 
-# Allow the App Store to reboot machine on macOS updates
-defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
-
-###############################################################################
-# Photos                                                                      #
-###############################################################################
-
-# Prevent Photos from opening automatically when devices are plugged in
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-for app in "cfprefsd" "Dock" "Finder" "Photos" "Safari" "SystemUIServer" "Terminal"; do
+for app in "cfprefsd" "Dock" "Finder" "Photos" "Safari" "SystemUIServer"; do
     killall "${app}" &> /dev/null
 done
 printf "\n  Done. Note that some of these changes require a logout/restart to take effect."
