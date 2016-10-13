@@ -47,10 +47,10 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true && \
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
-# Show Status Bar
+## Show Status Bar
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Set Default Finder Location to Home Folder
+## Set Default Finder Location to Home Folder
 defaults write com.apple.finder NewWindowTarget -string "PfLo" && \
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
@@ -63,6 +63,6 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
-for app in "Finder" "SystemUIServer"; do
+for app in "Finder" "App Store"; do
     killall "${app}" &> /dev/null
 done
