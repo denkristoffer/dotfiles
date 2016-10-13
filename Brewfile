@@ -14,7 +14,7 @@ tap 'homebrew/bundle'
 # brew 'puma/puma/puma-dev'
 # brew 'ruby-install'
 # brew 'z'
-brew 'zsh'
+# brew 'zsh'
 
 # Applications
 # cask 'alfred'
