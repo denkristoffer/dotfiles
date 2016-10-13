@@ -6,7 +6,7 @@ tap 'homebrew/bundle'
 # Formulas
 # brew 'chruby'
 # brew 'flow'
-brew 'git'
+# brew 'git'
 # brew 'mackup'
 # brew 'mpv', args: ['with-bundle', 'with-libbluray']
 # brew 'nvm'
