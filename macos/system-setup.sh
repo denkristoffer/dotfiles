@@ -52,13 +52,20 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
 # Disable auto-correct
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+# Dock
+## Empty Dock
+defaults write com.apple.dock persistent-apps -array
 
 # Enable firewall
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+## Hide indicator lights
+defaults write com.apple.dock show-process-indicators -bool false
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+## Set icon size to 34 pixels
+defaults write com.apple.dock tilesize -int 34
 
-for app in "Finder" "App Store"; do
+for app in "Finder" "Dock" "App Store"; do
     killall "${app}" &> /dev/null
 done
