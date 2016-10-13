@@ -117,7 +117,8 @@ homebrew/install.sh
 
 # Brewfile install
 printf "\n› brew bundle\n"
-sudo -k brew bundle
+sudo -K
+brew bundle
 
 # Find the installers and run them one at a time
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
