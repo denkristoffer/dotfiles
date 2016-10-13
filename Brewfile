@@ -49,22 +49,22 @@ cask 'viscosity'
 cask 'xld'
 
 # Mac App Store
-# mas '1Password', id: 443987910
-# mas '1Blocker', id: 1107421413
-# mas 'Affinity Photo', id: 824183456
-# mas 'Cookie', id: 415585910
-# mas 'Deliveries', id: 924726344
-# mas 'iA Writer', id: 775737590
-# mas 'Keynote', id: 409183694
-# mas 'MindNode', id: 992076693
-# mas 'Pages', id: 409201541
-# mas 'ReadKit', id: 588726889
-# mas 'The Unarchiver', id: 425424353
-# mas 'Textual', id: 896450579
-# mas 'Things', id: 407951449
-# mas 'Tweetbot', id: 557168941
-# mas 'Xcode', id: 497799835
-# mas 'Yoink', id: 457622435
+mas '1Password', id: 443987910
+mas '1Blocker', id: 1107421413
+mas 'Affinity Photo', id: 824183456
+mas 'Cookie', id: 415585910
+mas 'Deliveries', id: 924726344
+mas 'iA Writer', id: 775737590
+mas 'Keynote', id: 409183694
+mas 'MindNode', id: 992076693
+mas 'Pages', id: 409201541
+mas 'ReadKit', id: 588726889
+mas 'The Unarchiver', id: 425424353
+mas 'Textual', id: 896450579
+mas 'Things', id: 407951449
+mas 'Tweetbot', id: 557168941
+mas 'Xcode', id: 497799835
+mas 'Yoink', id: 457622435
 
 # QuickLook plugins
 cask 'qlcolorcode'
