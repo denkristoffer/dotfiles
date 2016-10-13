@@ -4,7 +4,7 @@
 
 printf "\n› Setting up zsh\n"
 
-sh -c 'sudo echo "/usr/local/bin/zsh\n" >> /etc/shells'
+sudo sh -c 'sudo echo "/usr/local/bin/zsh\n" >> /etc/shells'
 chsh -s /usr/local/bin/zsh
 
 # Install oh-my-zsh
