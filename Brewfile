@@ -11,7 +11,7 @@ brew 'git'
 # brew 'mpv', args: ['with-bundle', 'with-libbluray']
 brew 'nvm'
 # brew 'openssl'
-# brew 'puma/puma/puma-dev'
+brew 'puma/puma/puma-dev'
 # brew 'ruby-install'
 # brew 'z'
 brew 'zsh'
