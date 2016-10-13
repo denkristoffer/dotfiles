@@ -11,7 +11,7 @@ sudo echo "/usr/local/bin/zsh\n" >> /etc/shells
 curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log
 
 # Copy kristoffer.zsh-theme to $HOME/.oh-my-zsh/themes/
-cp -s $(pwd)/kristoffer.zsh-theme $HOME/.oh-my-zsh/themes/kristoffer.zsh-theme
+cp $(pwd)/kristoffer.zsh-theme $HOME/.oh-my-zsh/themes/kristoffer.zsh-theme
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
 typeset -U config_files
