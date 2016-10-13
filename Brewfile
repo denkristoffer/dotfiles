@@ -4,7 +4,7 @@ tap 'homebrew/bundle'
 tap 'puma/puma'
 
 # Formulas
-# brew 'chruby'
+brew 'chruby'
 # brew 'flow'
 brew 'git'
 # brew 'mackup'
