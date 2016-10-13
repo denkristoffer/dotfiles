@@ -130,6 +130,6 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # Run OS X system setup file last
 printf "\n› macOS system setup\n"
-sudo sh -c macos/system-setup.sh
+macos/system-setup.sh
 
 printf "\n› Done\n"
