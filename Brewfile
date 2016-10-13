@@ -12,7 +12,7 @@ brew 'git'
 brew 'nvm'
 # brew 'openssl'
 brew 'puma/puma/puma-dev'
-# brew 'ruby-install'
+brew 'ruby-install'
 # brew 'z'
 brew 'zsh'
 
