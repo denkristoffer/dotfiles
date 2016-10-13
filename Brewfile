@@ -5,15 +5,15 @@ tap 'puma/puma'
 
 # Formulas
 brew 'chruby'
-# brew 'flow'
+brew 'flow'
 brew 'git'
-# brew 'mackup'
+brew 'mackup'
 # brew 'mpv', args: ['with-bundle', 'with-libbluray']
 brew 'nvm'
 # brew 'openssl'
 brew 'puma/puma/puma-dev'
 brew 'ruby-install'
-# brew 'z'
+brew 'z'
 brew 'zsh'
 
 # Applications
@@ -49,7 +49,7 @@ brew 'zsh'
 # cask 'xld'
 
 # Mac App Store
-# mas '1Password', id: 443987910
+mas '1Password', id: 443987910
 # mas '1Blocker', id: 1107421413
 # mas 'Affinity Photo', id: 824183456
 # mas 'Cookie', id: 415585910
