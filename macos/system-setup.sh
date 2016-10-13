@@ -12,10 +12,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
-# See https://github.com/mathiasbynens/dotfiles/issues/237
-echo "0x08000100:0" > ~/.CFUserTextEncoding
-
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
