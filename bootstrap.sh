@@ -110,17 +110,17 @@ install_dotfiles () {
   done
 }
 
-# install_dotfiles
+install_dotfiles
 
 # Install Homebrew first, as it's needed for almost everything else
-# homebrew/install.sh
+homebrew/install.sh
 
 # Brewfile install
-# printf "\n› brew bundle\n"
-# brew bundle
+printf "\n› brew bundle\n"
+brew bundle
 
 # Find the installers and run them one at a time
-# find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # Run OS X system setup file last
 printf "\n› macOS system setup\n"
