@@ -1,19 +1,19 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
+# tap 'puma/puma'
 
 # Formulas
 brew 'chruby'
-brew 'flow'
+# brew 'flow'
 brew 'git'
-brew 'mackup'
+# brew 'mackup'
 # brew 'mpv', args: ['with-bundle', 'with-libbluray']
-brew 'nvm'
+# brew 'nvm'
 # brew 'openssl'
-brew 'puma/puma/puma-dev'
+# brew 'puma/puma/puma-dev'
 brew 'ruby-install'
-brew 'z'
+# brew 'z'
 brew 'zsh'
 
 # Applications
@@ -26,7 +26,7 @@ brew 'zsh'
 # cask 'controlplane'
 # cask 'daisydisk'
 # cask 'dropbox'
-cask 'flux'
+# cask 'flux'
 # cask 'github-desktop'
 # cask 'go2shell'
 # cask 'google-chrome'
