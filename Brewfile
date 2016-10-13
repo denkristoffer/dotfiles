@@ -26,7 +26,7 @@ brew 'zsh'
 # cask 'controlplane'
 # cask 'daisydisk'
 # cask 'dropbox'
-# cask 'flux'
+cask 'flux'
 # cask 'github-desktop'
 # cask 'go2shell'
 # cask 'google-chrome'
@@ -49,7 +49,7 @@ brew 'zsh'
 # cask 'xld'
 
 # Mac App Store
-mas '1Password', id: 443987910
+# mas '1Password', id: 443987910
 # mas '1Blocker', id: 1107421413
 # mas 'Affinity Photo', id: 824183456
 # mas 'Cookie', id: 415585910
