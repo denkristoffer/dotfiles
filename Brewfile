@@ -4,7 +4,7 @@ tap 'homebrew/bundle'
 # tap 'puma/puma'
 
 # Formulas
-brew 'chruby'
+# brew 'chruby'
 # brew 'flow'
 brew 'git'
 # brew 'mackup'
@@ -12,7 +12,7 @@ brew 'git'
 # brew 'nvm'
 # brew 'openssl'
 # brew 'puma/puma/puma-dev'
-brew 'ruby-install'
+# brew 'ruby-install'
 # brew 'z'
 brew 'zsh'
 
