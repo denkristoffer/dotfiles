@@ -10,6 +10,6 @@ then
   mkdir $HOME/.nvm
   export NVM_DIR="$HOME/.nvm"
   . "$(brew --prefix nvm)/nvm.sh"
-  
-  nvm install node > /tmp/node-install.log
+
+  nvm install node
 fi
