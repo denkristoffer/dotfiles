@@ -1,6 +1,4 @@
 #!/bin/sh
-#
-# Install Homebrew
 
 if test ! $(which brew)
 then

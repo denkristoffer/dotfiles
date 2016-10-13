@@ -1,6 +1,4 @@
 #!/bin/sh
-#
-# Install Node with nvm
 
 if test ! $(which node)
 then
