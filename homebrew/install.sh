@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo -K
+
 if test ! $(which brew)
 then
   printf "\n› Installing Homebrew\n"
