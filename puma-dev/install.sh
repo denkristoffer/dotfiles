@@ -3,7 +3,7 @@
 printf "\n› Setting up puma-dev\n"
 sudo -K
 echo $(whoami)
-mkdir $HOME/Library/LaunchAgents && chown kristoffer $HOME/Library/LaunchAgents # Shouldn't need this much longer: https://github.com/puma/puma-dev/pull/77
+mkdir -p $HOME/Library/LaunchAgents && chown kristoffer $HOME/Library/LaunchAgents # Shouldn't need this much longer: https://github.com/puma/puma-dev/pull/77
 
 sudo puma-dev -setup
 
