@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 DOTFILES_ROOT=$(pwd -P)
+export DOTFILES_ROOT
 
 set -e
 
