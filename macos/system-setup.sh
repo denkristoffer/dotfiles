@@ -63,8 +63,8 @@ defaults write com.apple.dock persistent-apps -array
 ## Hide indicator lights
 defaults write com.apple.dock show-process-indicators -bool false
 
-## Set icon size to 34 pixels
-defaults write com.apple.dock tilesize -int 34
+## Set icon size to 36 pixels
+defaults write com.apple.dock tilesize -int 36
 
 for app in "Finder" "Dock" "App Store"; do
     killall "${app}" &> /dev/null
