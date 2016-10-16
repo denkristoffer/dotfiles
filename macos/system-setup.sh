@@ -12,12 +12,16 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Enable Safari Develop Menu and Web Inspector
+# Safari
+## Enable Safari Develop Menu and Web Inspector
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true && \
 defaults write com.apple.Safari IncludeDevelopMenu -bool true && \
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true && \
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true && \
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Make Safari search default to Contains instead of Starts With
+defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
 # Prevent Time Machine from Prompting to Use New Hard Drives as Backup Volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -66,6 +70,6 @@ defaults write com.apple.dock show-process-indicators -bool false
 ## Set icon size to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
-for app in "Finder" "Dock" "App Store"; do
+for app in "Finder" "Dock" "Safari" "App Store"; do
     killall "${app}" &> /dev/null
 done
