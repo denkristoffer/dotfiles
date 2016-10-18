@@ -9,5 +9,5 @@ then
   export NVM_DIR="$HOME/.nvm"
   . "$(brew --prefix nvm)/nvm.sh"
 
-  nvm install node
+  nvm install --lts
 fi
