@@ -23,6 +23,7 @@ cask 'bartender'
 cask 'beardedspice'
 cask 'caprine'
 cask 'controlplane'
+cask 'cookie'
 cask 'daisydisk'
 cask 'dropbox'
 cask 'flux'
@@ -51,7 +52,6 @@ cask 'xld'
 mas '1Password', id: 443987910
 mas '1Blocker', id: 1107421413
 mas 'Affinity Photo', id: 824183456
-mas 'Cookie', id: 415585910
 mas 'Deliveries', id: 924726344
 mas 'iA Writer', id: 775737590
 mas 'Keynote', id: 409183694
