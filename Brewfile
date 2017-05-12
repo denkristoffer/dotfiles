@@ -19,7 +19,6 @@ brew 'zsh'
 # Applications
 cask 'alfred'
 cask 'appcleaner'
-cask 'atom'
 cask 'bartender'
 cask 'beardedspice'
 cask 'caprine'
