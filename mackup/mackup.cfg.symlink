@@ -3,7 +3,6 @@ engine = icloud
 directory = Apps/Mackup
 
 [applications_to_sync]
-atom
 bartender
 bundler
 controlplane
@@ -18,5 +17,6 @@ seil
 sublime-text-3
 transmit
 viscosity
+vscode
 z
 zsh
