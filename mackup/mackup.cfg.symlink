@@ -6,7 +6,6 @@ directory = Apps/Mackup
 bartender
 bundler
 controlplane
-flux
 git
 littlesnitch
 mpv
