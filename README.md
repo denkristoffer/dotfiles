@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles to set up an OS X installation to my liking.
+Dotfiles to set up a macOS installation to my liking.
 
 Install with `./bootstrap.sh`
 
