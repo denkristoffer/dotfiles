@@ -55,6 +55,7 @@ mas '1Blocker', id: 1107421413
 mas 'Affinity Photo', id: 824183456
 mas 'Deliveries', id: 924726344
 mas 'iA Writer', id: 775737590
+mas 'Intacept', id: 1083233871
 mas 'Keynote', id: 409183694
 mas 'MindNode', id: 992076693
 mas 'Pages', id: 409201541
