@@ -60,6 +60,7 @@ mas 'MindNode', id: 992076693
 mas 'Pages', id: 409201541
 mas 'Radium', id: 597611879
 mas 'ReadKit', id: 588726889
+mas 'Sip', id: 507257563
 mas 'The Unarchiver', id: 425424353
 mas 'Textual', id: 896450579
 mas 'Things3', id: 904280696
