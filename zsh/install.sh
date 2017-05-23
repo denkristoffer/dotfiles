@@ -14,9 +14,8 @@ curl -L http://install.ohmyz.sh | sh > /tmp/oh-my-zsh-install.log
 cp "$DOTFILES_ROOT/zsh/kristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/"
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
-# typeset -U config_files
 config_files=($(dirname "$(pwd)")/**/*.zsh)
-echo $config_files
+# echo $config_files
 
 for file in ${config_files}
 do
