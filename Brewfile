@@ -62,7 +62,7 @@ mas 'Radium', id: 597611879
 mas 'ReadKit', id: 588726889
 mas 'The Unarchiver', id: 425424353
 mas 'Textual', id: 896450579
-mas 'Things', id: 407951449
+mas 'Things3', id: 904280696
 mas 'Tweetbot', id: 557168941
 mas 'Ulysses', id: 623795237
 # mas 'Xcode', id: 497799835 # Leave this out as it triggers having to accept the license
