@@ -4,6 +4,7 @@ vendor/bundle
 .ssh/
 !.ssh/*.pub
 !.ssh/config
+.vscode
 
 # Files that might appear on external disk
 .Spotlight-V100
