@@ -12,6 +12,7 @@ brew 'nvm'
 brew 'openssl'
 brew 'puma/puma/puma-dev'
 brew 'ruby-install'
+brew 'yarn', args: ['without-node']
 brew 'z'
 brew 'zsh'
 
@@ -32,7 +33,6 @@ cask 'hazel'
 cask 'imageoptim'
 cask 'iterm2'
 cask 'karabiner-elements'
-cask 'kodi'
 cask 'little-snitch'
 cask 'musicbrainz-picard'
 cask 'paw'
@@ -40,12 +40,15 @@ cask 'postgres'
 cask 'postico'
 cask 'scroll-reverser'
 cask 'selfcontrol'
+cask 'sketch'
 cask 'slack'
+cask 'soda-player'
 cask 'spotify'
 cask 'torbrowser'
 cask 'transmission'
 cask 'viscosity'
 cask 'visual-studio-code'
+cask 'whatsapp'
 cask 'xld'
 
 # Mac App Store
@@ -57,6 +60,7 @@ mas 'iA Writer', id: 775737590
 mas 'Intacept', id: 1083233871
 mas 'Keynote', id: 409183694
 mas 'MindNode', id: 992076693
+mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Radium', id: 597611879
 mas 'ReadKit', id: 588726889
