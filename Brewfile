@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 
 # Formulas
 brew 'git'
+brew 'gpg'
 brew 'mackup'
 brew 'mpv', args: ['with-bundle', 'with-libbluray']
 brew 'nvm'
@@ -26,6 +27,7 @@ cask 'force-paste'
 cask 'github'
 cask 'go2shell'
 cask 'google-chrome'
+cask 'gpg-suite'
 cask 'hazel'
 cask 'imageoptim'
 cask 'iterm2'
