@@ -1,32 +1,29 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
 
 # Formulas
-brew 'chruby'
 brew 'git'
 brew 'mackup'
 brew 'mpv', args: ['with-bundle', 'with-libbluray']
 brew 'nvm'
-brew 'openssl'
-brew 'puma/puma/puma-dev'
-brew 'ruby-install'
 brew 'yarn', args: ['without-node']
 brew 'z'
 brew 'zsh'
 
 # Applications
+cask '1password'
 cask 'alfred'
 cask 'appcleaner'
 cask 'bartender'
 cask 'beardedspice'
-cask 'caprine'
 cask 'controlplane'
 cask 'cookie'
 cask 'daisydisk'
+cask 'docker'
 cask 'dropbox'
-cask 'github-desktop'
+cask 'force-paste'
+cask 'github'
 cask 'go2shell'
 cask 'google-chrome'
 cask 'hazel'
@@ -36,14 +33,13 @@ cask 'karabiner-elements'
 cask 'little-snitch'
 cask 'musicbrainz-picard'
 cask 'paw'
-cask 'postgres'
-cask 'postico'
 cask 'scroll-reverser'
 cask 'selfcontrol'
 cask 'sketch'
 cask 'slack'
 cask 'soda-player'
 cask 'spotify'
+cask 'there'
 cask 'torbrowser'
 cask 'transmission'
 cask 'viscosity'
@@ -52,10 +48,11 @@ cask 'whatsapp'
 cask 'xld'
 
 # Mac App Store
-mas '1Password', id: 443987910
 mas '1Blocker', id: 1107421413
 mas 'Affinity Photo', id: 824183456
+mas 'Black Out', id: 1319884285
 mas 'Deliveries', id: 924726344
+mas 'Gestimer', id: 990588172
 mas 'iA Writer', id: 775737590
 mas 'Intacept', id: 1083233871
 mas 'Keynote', id: 409183694
@@ -80,4 +77,3 @@ cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'qlvideo'
 cask 'quicklook-json'
-cask 'betterzipql'

@@ -4,15 +4,12 @@ path = Library/Mobile Documents/com~apple~CloudDocs/Apps
 
 [applications_to_sync]
 bartender
-bundler
 controlplane
 git
 karabiner-elements
 littlesnitch
 mpv
 oh-my-zsh
-ruby
-ruby-version
 selfcontrol
 viscosity
 vscode
