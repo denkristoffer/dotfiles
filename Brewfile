@@ -59,7 +59,7 @@ mas 'Gestimer', id: 990588172
 mas 'iA Writer', id: 775737590
 mas 'Intacept', id: 1083233871
 mas 'Keynote', id: 409183694
-mas 'MindNode', id: 992076693
+mas 'MindNode 5', id: 1289197285
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Radium', id: 597611879
