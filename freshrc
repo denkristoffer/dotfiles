@@ -10,7 +10,9 @@
 
 fresh freshshell/fresh bin/fresh --bin
 
-fresh gitconfig --file
+fresh-options --file
+  fresh config/\*
+fresh-options
 
 # Shell
 fresh denkristoffer/dotfiles shell/aliases/\*
