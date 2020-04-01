@@ -1,0 +1,18 @@
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+
+Host visualstudio.com
+  IdentityFile ~/.ssh/visualstudio
+
+Host github.com
+  IdentityFile ~/.ssh/github
+
+Host gitlab.com
+  IdentityFile ~/.ssh/gitlab
+
+Host nas
+  HostName nas.kristoffer.is
+  IdentityFile ~/.ssh/nas
+  User kristoffer
+  Port 51437
