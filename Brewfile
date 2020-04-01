@@ -9,7 +9,7 @@ brew 'git'
 brew 'gnupg'
 brew 'mas'
 brew 'nvm'
-brew 'yarn', args: ['without-node']
+brew 'yarn'
 brew 'youtube-dl'
 brew 'z'
 brew 'zsh'
