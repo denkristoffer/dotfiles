@@ -18,5 +18,7 @@ fresh-options
 fresh denkristoffer/dotfiles shell/aliases/\*
 
 fresh_after_build() {
-  ./bootstrap.sh
+  sh -c "bootstrap.sh"
+  
+  echo "Done?"
 }
