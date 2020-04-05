@@ -10,8 +10,8 @@ chsh -s /usr/local/bin/zsh
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /tmp/oh-my-zsh-install.log
 
-# Copy kristoffer.zsh-theme to $HOME/.oh-my-zsh/themes/
-cp "$DOTFILES_ROOT/zsh/kristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/"
+# Copy denkristoffer.zsh-theme to $HOME/.oh-my-zsh/themes/
+cp "$DOTFILES_ROOT/zsh/denkristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/"
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
 config_files=($(dirname "$(pwd)")/**/*.zsh)
