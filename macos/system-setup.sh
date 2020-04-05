@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
-# My choice of OS X settings based on https://github.com/herrbischoff/awesome-osx-command-line and http://mths.be/macos
+# My choice of OS X settings based on
+# https://github.com/herrbischoff/awesome-osx-command-line
+# and http://mths.be/macos
 
 # Ask for the administrator password upfront
 sudo -v
@@ -40,7 +42,10 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 ## Show the ~/Library folder
-chflags nohidden ~/Library
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+
+## Hide ~/Movies and ~/Public
+chflags hidden ~/Public ~/Movies
 
 ## Show "Quit Finder" Menu Item
 defaults write com.apple.finder QuitMenuItem -bool true
