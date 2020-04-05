@@ -2,19 +2,32 @@ fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 
 fresh-options --file
-  fresh denkristoffer/dotfiles config/\*
+  fresh config/\*
 fresh-options
 
+# SSH
 fresh-options --file=~/.ssh/config --marker
   fresh config/ssh/config
   fresh config/ssh/config.local --ignore-missing
 fresh-options
 
+# Zsh
+fresh-options --file=~/.zshrc --marker
+  fresh shell/zsh/completion.zsh
+  fresh shell/zsh/zshrc
+
+  # this loads the shell files and needs to be at the bottom of the zshrc for
+  # compdef be availiable
+  fresh freshshell/fresh contrib/source-build.sh
+
+  # de-duplicate PATH
+  # fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
+fresh-options
+
+
 # Shell
-fresh denkristoffer/dotfiles shell/aliases/\*
+fresh shell/aliases/\*
 
 fresh_after_build() {
-  sh -c "bootstrap.sh"
-  
-  echo "Done?"
+  sh -c "~/.dotfiles/bootstrap.sh"
 }
