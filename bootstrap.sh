@@ -5,15 +5,17 @@ export DOTFILES_ROOT
 
 set -e
 
-user () {
-  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
-}
-
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
-}
+cd $DOTFILES_ROOT
 
 # These aren't currently in use
+# user () {
+#   printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+# }
+#
+# success () {
+#   printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+# }
+#
 # info () {
 #   printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 # }
@@ -40,3 +42,5 @@ printf "\n› macOS system setup\n"
 "$DOTFILES_ROOT"/macos/system-setup.sh
 
 printf "\n› Done\n"
+
+cd -
