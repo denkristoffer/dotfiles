@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES_ROOT="$(pwd -P)"
+DOTFILES_ROOT="$FRESH_LOCAL"
 export DOTFILES_ROOT
 
 set -e
