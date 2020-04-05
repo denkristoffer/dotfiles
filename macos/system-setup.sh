@@ -77,5 +77,5 @@ defaults write com.apple.dock show-process-indicators -bool false
 defaults write com.apple.dock tilesize -int 36
 
 for app in "Finder" "Dock" "Safari" "App Store"; do
-    killall "${app}" &> /dev/null
+    killall "${app}"
 done
