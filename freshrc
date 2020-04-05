@@ -29,5 +29,5 @@ fresh-options
 fresh shell/aliases/\*
 
 fresh_after_build() {
-  sh -c "~/.dotfiles/bootstrap.sh"
+  sh -c "$HOME/.dotfiles/bootstrap.sh"
 }

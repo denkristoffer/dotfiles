@@ -14,12 +14,12 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 cp "$DOTFILES_ROOT/zsh/denkristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/"
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
-config_files=($(dirname "$(pwd)")/**/*.zsh)
+# config_files=($(dirname "$(pwd)")/**/*.zsh)
 # echo $config_files
 
-for file in ${config_files}
-do
-  filename=$(basename "$file")
-  echo $filename
-  # cp $file $HOME/.oh-my-zsh/custom/
-done
+# for file in ${config_files}
+# do
+#   filename=$(basename "$file")
+#   echo $filename
+#   # cp $file $HOME/.oh-my-zsh/custom/
+# done
