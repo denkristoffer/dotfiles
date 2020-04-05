@@ -76,6 +76,6 @@ defaults write com.apple.dock show-process-indicators -bool false
 ## Set icon size to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
-for app in "Finder" "Dock" "Safari" "App Store"; do
-    killall "${app}"
+for app in "Finder" "Dock" "Safari"; do
+    killall "${app}" &> /dev/null
 done
