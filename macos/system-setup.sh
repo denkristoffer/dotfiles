@@ -32,7 +32,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Enable firewall
-sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on 
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -42,7 +42,8 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 ## Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+chflags nohidden ~/Library
+xattr -d com.apple.FinderInfo ~/Library &> /dev/null
 
 ## Hide ~/Movies and ~/Public
 chflags hidden ~/Public ~/Movies
