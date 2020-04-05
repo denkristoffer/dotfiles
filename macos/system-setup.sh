@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# My choice of OS X settings based on
-# https://github.com/herrbischoff/awesome-osx-command-line
-# and http://mths.be/macos
+# My choice of OS X settings based on:
+# - https://github.com/herrbischoff/awesome-osx-command-line
+# - http://mths.be/macos
 
 # Ask for the administrator password upfront
 sudo -v
