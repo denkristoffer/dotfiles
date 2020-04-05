@@ -1,0 +1,3 @@
+fpath=(~/.fresh/build/completion $fpath)
+
+source ~/.fresh/build/shell.sh
