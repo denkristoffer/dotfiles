@@ -1,0 +1,12 @@
+# Set your name and email with the following:
+#   git config -f ~/.gitconfig.local user.name "John Appleseed"
+#   git config -f ~/.gitconfig.local user.email me@example.com
+
+[core]
+	excludesfile = ~/.gitignore
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

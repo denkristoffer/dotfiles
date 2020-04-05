@@ -1,4 +1,4 @@
-alias reload!='. ~/.zshrc'
+alias reload!='source $HOME/.zshrc'
 
 alias brwe='brew'
 
