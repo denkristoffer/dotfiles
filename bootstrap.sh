@@ -42,5 +42,3 @@ printf "\n› macOS system setup\n"
 "$DOTFILES_ROOT"/macos/system-setup.sh
 
 printf "\n› Done\n"
-
-cd -
