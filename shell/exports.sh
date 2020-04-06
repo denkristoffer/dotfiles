@@ -7,5 +7,5 @@ path_add() {
 export DOTFILES=~/.dotfiles
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export ZSH=$HOME/.oh-my-zsh
+
 

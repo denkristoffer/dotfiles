@@ -3,13 +3,10 @@ ZSH_THEME="denkristoffer"
 
 # Plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git yarn history-substring-search)
+plugins=(git nvm yarn history-substring-search)
 
 # oh-my-zsh
-. $ZSH/oh-my-zsh.sh
+. $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # Load z
 . `brew --prefix`/etc/profile.d/z.sh
-
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
