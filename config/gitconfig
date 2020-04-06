@@ -7,7 +7,7 @@
   path = .gitconfig.local
 
 [commit]
-  gpgsign = false
+  gpgsign = true
 
 [core]
   excludesfile = ~/.gitignore
