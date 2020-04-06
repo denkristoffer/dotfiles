@@ -5,6 +5,7 @@ path_add() {
 }
 
 export DOTFILES=~/.dotfiles
+export LANG=da_DK.UTF-8
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
