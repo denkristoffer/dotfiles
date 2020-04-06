@@ -4,14 +4,17 @@
 
 printf "\n› Setting up zsh\n"
 
-sudo sh -c "sudo printf \"/usr/local/bin/zsh\n\" >> /etc/shells"
-chsh -s /usr/local/bin/zsh
+if ! [[ $SHELL == "/usr/local/bin/zsh" ]]
+then
+  sudo sh -c "sudo printf \"/usr/local/bin/zsh\n\" >> /etc/shells"
+  chsh -s /usr/local/bin/zsh
+fi
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /tmp/oh-my-zsh-install.log
 
-# Copy denkristoffer.zsh-theme to $HOME/.oh-my-zsh/themes/
-cp "$DOTFILES_ROOT/zsh/denkristoffer.zsh-theme" "$HOME/.oh-my-zsh/themes/"
+# Copy theme
+cp "$DOTFILES_ROOT/zsh/denkristoffer.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/"
 
 # Copy all zsh files to $HOME/.oh-my-zsh/custom
 # config_files=($(dirname "$(pwd)")/**/*.zsh)
