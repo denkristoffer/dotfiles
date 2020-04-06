@@ -1,18 +1,25 @@
-# Set your name and email with the following:
+# Set your name, email and signing key with the following:
 #   git config -f ~/.gitconfig.local user.name "John Appleseed"
 #   git config -f ~/.gitconfig.local user.email me@example.com
+#   git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2
+
+[include]
+  path = .gitconfig.local
+
+[commit]
+  gpgsign = false
 
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [gpg]
-	program = /usr/local/bin/gpg
+  program = /usr/local/bin/gpg
