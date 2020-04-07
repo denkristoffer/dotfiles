@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test ! $(which node)
+if test ! $(which nvm)
 then
   printf "\n› Installing Node\n"
 
