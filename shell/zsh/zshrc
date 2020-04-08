@@ -10,4 +10,4 @@ plugins=(git nvm yarn history-substring-search)
 . `brew --prefix`/etc/profile.d/z.sh
 
 # fnm
-eval "$(fnm env --multi)"
+eval "$(fnm env --multi --use-on-cd)"
