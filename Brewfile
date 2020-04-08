@@ -1,14 +1,15 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'Schniz/tap'
 
 # Formulas
 brew 'bat'
 brew 'ffmpeg'
+brew 'fnm'
 brew 'git'
 brew 'gnupg'
 brew 'mas'
-brew 'nvm'
 brew 'yarn'
 brew 'youtube-dl'
 brew 'z'

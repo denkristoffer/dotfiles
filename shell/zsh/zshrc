@@ -8,3 +8,6 @@ plugins=(git nvm yarn history-substring-search)
 
 # Load z
 . `brew --prefix`/etc/profile.d/z.sh
+
+# fnm
+eval "$(fnm env --multi)"

@@ -1,13 +1,13 @@
 #!/bin/sh
 
-if test ! $(which nvm)
+if test ! $(which fnm)
 then
   printf "\n› Installing Node\n"
 
-  # Finish nvm setup
-  mkdir $HOME/.nvm
-  export NVM_DIR="$HOME/.nvm"
-  . "$(brew --prefix nvm)/nvm.sh"
+  # Finish fnm setup
+  eval "$(fnm env --multi)"
 
-  nvm install --lts
+  # Node v12
+  fnm install lts/erbium
+  fnm use lts/erbium
 fi
