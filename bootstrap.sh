@@ -32,7 +32,7 @@ cd $DOTFILES_ROOT
 # Brewfile install
 printf "\n› brew bundle\n"
 sudo -K
-brew bundle
+brew bundle --no-lock
 
 # Find the installers and run them one at a time
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
