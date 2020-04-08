@@ -24,7 +24,6 @@ fresh-options --file=~/.zshrc --marker
   # fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
 fresh-options
 
-
 # Shell
 fresh shell/aliases/\*
 
