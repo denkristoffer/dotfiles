@@ -4,6 +4,7 @@ Dotfiles to set up a macOS installation to my liking.
 
 Based on/stolen from:
 
+- https://github.com/freshshell/fresh
 - https://github.com/holman/dotfiles
 - https://github.com/mathiasbynens/dotfiles
 
@@ -14,4 +15,15 @@ Based on/stolen from:
 - Symlink fresh config file `ln -s "$HOME/.dotfiles/freshrc" "$HOME/.freshrc"`
 - ``FRESH_LOCAL_SOURCE=denkristoffer/dotfiles /bin/bash -c "`curl -sL https://get.freshshell.com`"``
 
-The system still requires some manual setup after running, remember to open and run the Little Snitch installer with e.g. `open /usr/local/Caskroom/little-snitch/4.5/LittleSnitch-4.5.dmg` – the path changes with the version.
+### Manual steps
+
+The system still requires some manual setup after running. 
+
+Remember to open and run the Little Snitch installer with e.g. `open /usr/local/Caskroom/little-snitch/4.5/LittleSnitch-4.5.dmg` – the path changes with the version.
+
+Set name, email and signing key with the following local git config:
+
+- `git config -f ~/.gitconfig.local user.name "John Appleseed"`
+- `git config -f ~/.gitconfig.local user.email me@example.com`
+- `git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2`
+
