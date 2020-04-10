@@ -26,6 +26,7 @@ fresh-options
 
 # Shell
 fresh shell/aliases/\*
+fresh shell/exports.sh
 
 fresh_after_build() {
   sh -c "$HOME/.dotfiles/bootstrap.sh"
