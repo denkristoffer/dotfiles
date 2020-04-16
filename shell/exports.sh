@@ -4,7 +4,9 @@ path_add() {
   fi
 }
 
-export DOTFILES=~/.dotfiles
+export FRESH_BIN_PATH=/usr/local/bin
+export FRESH_LOCAL="$HOME/denkristoffer/dotfiles"
+export FRESH_LOCAL_SOURCE=denkristoffer/dotfiles
 export LANG=da_DK.UTF-8
 
 path_add "/usr/local/sbin"
