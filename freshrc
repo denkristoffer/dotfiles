@@ -29,5 +29,5 @@ fresh shell/aliases/\*
 fresh shell/exports.sh
 
 fresh_after_build() {
-  sh -c "$HOME/.dotfiles/bootstrap.sh"
+  sh -c "$FRESH_LOCAL/bootstrap.sh"
 }
