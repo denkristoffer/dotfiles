@@ -71,7 +71,6 @@ mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Radium', id: 597611879
 mas 'ReadKit', id: 588726889
-mas 'Sip', id: 507257563
 mas 'The Unarchiver', id: 425424353
 mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 557168941
