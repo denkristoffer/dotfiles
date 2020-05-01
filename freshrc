@@ -6,10 +6,8 @@ fresh-options --file
 fresh-options
 
 # GPG
-fresh-options --marker
-  fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf
-  fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-fresh-options
+fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --marker
+fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
 
 # SSH
 fresh-options --file=~/.ssh/config --marker
