@@ -6,7 +6,7 @@ fresh-options --file
 fresh-options
 
 # GPG
-fresh config/gnupg/ --file=~/.gnupg/ --marker
+fresh config/gnupg/\* --file=~/.gnupg/ --marker
 
 # SSH
 fresh-options --file=~/.ssh/config --marker
