@@ -2,8 +2,8 @@ Host *
   AddKeysToAgent yes
   UseKeychain yes
 
-Host visualstudio.com
-  IdentityFile ~/.ssh/visualstudio
+Host dev.azure.com
+  IdentityFile ~/.ssh/visualstudio-rsa
 
 Host github.com
   IdentityFile ~/.ssh/github
