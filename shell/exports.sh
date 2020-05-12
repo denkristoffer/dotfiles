@@ -10,3 +10,5 @@ export FRESH_LOCAL_SOURCE=denkristoffer/dotfiles
 export LANG=da_DK.UTF-8
 
 path_add "/usr/local/sbin"
+path_add "/usr/local/sbin"
+path_add "$HOME/.fastlane/bin"
