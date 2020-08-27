@@ -11,6 +11,9 @@ Host github.com
 Host gitlab.com
   IdentityFile ~/.ssh/gitlab
 
+Host source.developers.google.com
+  IdentityFile ~/.ssh/googlecloudsource
+
 Host nas
   HostName nas.kristoffer.is
   IdentityFile ~/.ssh/nas
