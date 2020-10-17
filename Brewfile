@@ -77,6 +77,7 @@ mas 'The Unarchiver', id: 425424353
 mas 'Things 3', id: 904280696
 mas 'Tweetbot', id: 557168941
 # mas 'Xcode', id: 497799835 # Leave this out as it triggers having to accept the license
+mas 'WireGuard', id: 1451685025
 mas 'Yoink', id: 457622435
 
 # QuickLook plugins
