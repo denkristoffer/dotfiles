@@ -62,6 +62,7 @@ cask 'homebrew/cask-drivers/sonos'
 # Mac App Store
 mas '1Blocker for Safari', id: 1107421413
 mas 'Black Out', id: 1319884285
+mas 'Dark Reader', id: 1438243180
 mas 'Deliveries', id: 924726344
 mas 'Gestimer', id: 990588172
 mas 'iA Writer', id: 775737590
