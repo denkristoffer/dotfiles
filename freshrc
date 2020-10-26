@@ -32,11 +32,6 @@ fresh-options
 fresh shell/aliases/\*
 fresh shell/exports.sh
 
-# Completions
-fresh-options --file=completion/fnm
-  fnm completions --shell zsh
-fresh-options
-
 fresh_after_build() {
   sh -c "$FRESH_LOCAL/bootstrap.sh"
 }
