@@ -79,3 +79,5 @@ defaults write com.apple.dock tilesize -int 36
 for app in "Finder" "Dock" "Safari"; do
     killall "${app}" &> /dev/null
 done
+
+exit 0
