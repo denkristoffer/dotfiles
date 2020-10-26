@@ -11,5 +11,5 @@ then
   fnm install lts/erbium
   fnm use lts/erbium
 
-  touch ~/.fresh/build/completion/_fnm && fnm completions --shell zsh > ~/.fresh/build/completion/_fnm
+  fnm completions --shell zsh > ~/.fresh/build/completion/_fnm
 fi
