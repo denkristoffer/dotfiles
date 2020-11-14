@@ -4,7 +4,6 @@ tap 'homebrew/bundle'
 
 # Formulas
 brew 'bat'
-brew 'ffmpeg'
 brew 'fnm'
 brew 'git'
 brew 'gnupg'
