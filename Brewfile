@@ -64,8 +64,6 @@ mas 'iA Writer', id: 775737590
 mas 'Internet Access Policy Viewer', id: 1482630322
 mas 'Lungo', id: 1263070803
 mas 'MindNode – Mind Map', id: 1289197285
-mas 'Numbers', id: 409203825
-mas 'Pages', id: 409201541
 mas 'Radium', id: 597611879
 mas 'ReadKit', id: 588726889
 mas 'The Unarchiver', id: 425424353
