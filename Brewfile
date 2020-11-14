@@ -5,6 +5,7 @@ tap 'homebrew/bundle'
 # Formulas
 brew 'bat'
 brew 'ffmpeg'
+brew 'fnm'
 brew 'git'
 brew 'gnupg'
 brew 'mas'
@@ -12,8 +13,6 @@ brew 'yarn'
 brew 'youtube-dl'
 brew 'z'
 brew 'zsh'
-
-brew 'Schniz/tap/fnm'
 
 # Applications
 cask '1password'
