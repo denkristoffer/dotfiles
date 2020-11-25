@@ -37,7 +37,6 @@ cask 'imageoptim'
 cask 'iterm2'
 cask 'karabiner-elements'
 cask 'little-snitch'
-cask 'mdimagesizemdimporter'
 cask 'musicbrainz-picard'
 cask 'plex'
 cask 'refined-github-safari'
@@ -72,8 +71,6 @@ mas 'Tweetbot', id: 557168941
 mas 'Yoink', id: 457622435
 
 # QuickLook plugins
-cask 'qlcolorcode'
-cask 'qlimagesize'
 cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'qlvideo'
