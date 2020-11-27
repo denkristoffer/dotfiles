@@ -25,4 +25,4 @@ Set name, email and signing key with the following local git config:
 - `git config -f ~/.gitconfig.local user.email me@example.com`
 - `git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2`
 
-Move SSH keys.
+Move SSH keys and GPG keys.
