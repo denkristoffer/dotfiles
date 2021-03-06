@@ -16,4 +16,3 @@ export NEXT_TELEMETRY_DISABLED=1
 
 path_add "/usr/local/sbin"
 path_add "/usr/local/sbin"
-path_add "$HOME/.fastlane/bin"
