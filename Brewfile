@@ -64,6 +64,7 @@ mas "Lungo", id: 1263070803
 mas "MindNode", id: 1289197285
 mas "Presentify", id: 1507246666
 mas "ReadKit", id: 588726889
+mas "Simple Comic", id: 1497435571
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Tweetbot", id: 557168941
