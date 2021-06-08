@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 # $ZSH/themes/ and $ZSH/plugins/
 ZSH_THEME="denkristoffer"
-plugins=(git yarn history-substring-search)
+plugins=(git yarn history-substring-search thefuck)
 
 . $ZSH/oh-my-zsh.sh
 
