@@ -12,4 +12,4 @@ autoload -U compinit; compinit -w -d ~/.config/zsh/cache/zcompdump
 . `brew --prefix`/etc/profile.d/z.sh
 
 # fnm
-# eval "$(fnm env --use-on-cd)"
+eval "$(fnm env)"
