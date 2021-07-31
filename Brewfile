@@ -47,7 +47,6 @@ cask "slack"
 cask "there"
 cask "viscosity"
 cask "visual-studio-code"
-cask "whatsapp"
 cask "xld"
 
 cask "homebrew/cask-drivers/sonos"
