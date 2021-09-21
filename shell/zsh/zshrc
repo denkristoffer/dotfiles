@@ -13,3 +13,6 @@ autoload -U compinit; compinit -w -d ~/.config/zsh/cache/zcompdump
 
 # fnm
 eval "$(fnm env)"
+
+# Contentful k8s
+export KUBECONFIG=~/.kube/cf-authinfo.yaml:~/.kube/cf-staging.yaml:~/.kube/cf-preview.yaml:~/.kube/cf-tools.yaml:~/.kube/cf-production.yaml:~/.kube/cf-auth-okta.yaml
