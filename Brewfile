@@ -38,7 +38,6 @@ cask "karabiner-elements"
 cask "little-snitch"
 cask "musicbrainz-picard"
 cask "plex"
-cask "refined-github-safari"
 cask "selfcontrol"
 cask "sensiblesidebuttons"
 cask "signal"
@@ -61,6 +60,7 @@ mas "Internet Access Policy Viewer", id: 1482630322
 mas "Lungo", id: 1263070803
 mas "MindNode", id: 1289197285
 mas "Presentify", id: 1507246666
+mas "Refined GitHub", id: 1519867270
 mas "Simple Comic", id: 1497435571
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
