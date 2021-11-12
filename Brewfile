@@ -51,6 +51,7 @@ cask "homebrew/cask-drivers/sonos"
 
 # Mac App Store
 mas "1Blocker: Ad Blocker & Privacy", id: 1365531024
+mas "1Password for Safari", id: 1569813296
 mas "Black Out", id: 1319884285
 mas "Dark Reader for Safari", id: 1438243180
 mas "Deliveries", id: 924726344
