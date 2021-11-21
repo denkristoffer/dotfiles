@@ -3,7 +3,7 @@ Host *
   UseKeychain yes
 
 Host *.azure.com
-  IdentityFile ~/.ssh/visualstudio-rsa
+  IdentityFile ~/.ssh/azure
 
 Host github.com
   IdentityFile ~/.ssh/github
