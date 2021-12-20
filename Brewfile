@@ -64,7 +64,6 @@ mas "Refined GitHub", id: 1519867270
 mas "Simple Comic", id: 1497435571
 mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
-mas "Tweetbot", id: 557168941
 mas "Yoink", id: 457622435
 
 # QuickLook plugins
