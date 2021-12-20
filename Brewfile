@@ -16,6 +16,7 @@ brew "zsh"
 
 # Applications
 cask "1password"
+cask "actual"
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
