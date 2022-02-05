@@ -2,6 +2,6 @@
 
 hs.hotkey.bind(hyper, "b", function()
   -- bluetooth.power(true)
-  local _, output = hs.osascript.applescriptFromFile("headphones.applescript")
+  local _, output = hs.osascript.applescriptFromFile("toggle-headphones.applescript")
   hs.alert.show(output)
 end)
