@@ -1,5 +1,5 @@
 hs.hotkey.bind(hyper, "f", function()
-  -- local activeApplication = hs.window:focusedWindow
+  local activeWindow = hs.window:focusedWindow
   
-  hs.window:toggleFullScreen()
+  activeWindow:toggleFullScreen()
 end)
