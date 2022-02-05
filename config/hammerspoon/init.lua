@@ -1,5 +1,7 @@
 require 'hyper'
+
 require 'bluetooth'
+require 'hotkey'
 require 'layout'
 
 local log = hs.logger.new('hammerspoon','debug')
@@ -18,6 +20,7 @@ function openApp(name)
   else
     hs.application.launchOrFocus(name)
   end
+  hyper.triggered = true
 end
 
 -- Code
