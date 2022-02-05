@@ -1,10 +1,12 @@
-local hyper = {"cmd", "alt", "ctrl","shift"}
+require 'hyper'
+require 'bluetooth'
+
 local log = hs.logger.new('hammerspoon','debug')
 
 function openApp(name)
   local app = hs.application.get(name)
 
-  log.i("open App", name)
+  log.i('open App', name)
 
   if app then
     if app:isFrontmost() then
@@ -19,22 +21,22 @@ end
 
 -- Code
 function code()
-  openApp("Visual Studio Code")
+  openApp('Visual Studio Code')
 end
 
 -- iA Writer
 function writer()
-  openApp("iA Writer")
+  openApp('iA Writer')
 end
 
 -- Messages
 function messages()
-  openApp("Messages")
+  openApp('Messages')
 end
 
 -- Safari
 function safari()
-  openApp("Safari")
+  openApp('Safari')
 end
 
 
