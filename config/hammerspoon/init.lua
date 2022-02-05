@@ -17,16 +17,22 @@ function openApp(name)
   end
 end
 
--- iA Writer
-function writer()
-  openApp("iA Writer")
-end
-
 -- Code
 function code()
   openApp("Visual Studio Code")
 end
 
+-- iA Writer
+function writer()
+  openApp("iA Writer")
+end
 
-hs.hotkey.bind(hyper, 'w', writer)
+-- Safari
+function safari()
+  openApp("Safari")
+end
+
+
 hs.hotkey.bind(hyper, 'c', code)
+hs.hotkey.bind(hyper, 's', safari)
+hs.hotkey.bind(hyper, 'w', writer)
