@@ -1,5 +1,6 @@
 require 'hyper'
 require 'bluetooth'
+require 'layout'
 
 local log = hs.logger.new('hammerspoon','debug')
 
