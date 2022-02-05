@@ -11,7 +11,7 @@ then
 fi
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" > /tmp/oh-my-zsh-install.log
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc > /tmp/oh-my-zsh-install.log
 
 # Copy theme
 cp "$DOTFILES_ROOT/zsh/denkristoffer.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/"
