@@ -27,6 +27,11 @@ function writer()
   openApp("iA Writer")
 end
 
+-- Messages
+function messages()
+  openApp("Messages")
+end
+
 -- Safari
 function safari()
   openApp("Safari")
@@ -34,5 +39,6 @@ end
 
 
 hs.hotkey.bind(hyper, 'c', code)
+hs.hotkey.bind(hyper, 'm', messages)
 hs.hotkey.bind(hyper, 's', safari)
 hs.hotkey.bind(hyper, 'w', writer)
