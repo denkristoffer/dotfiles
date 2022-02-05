@@ -44,7 +44,7 @@ function safari()
 end
 
 
-hs.hotkey.bind(hyper, 'c', code)
-hs.hotkey.bind(hyper, 'm', messages)
-hs.hotkey.bind(hyper, 's', safari)
-hs.hotkey.bind(hyper, 'w', writer)
+hyper:bind({}, 'c', code)
+hyper:bind({}, 'm', messages)
+hyper:bind({}, 's', safari)
+hyper:bind({}, 'w', writer)
