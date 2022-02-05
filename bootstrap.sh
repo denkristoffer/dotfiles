@@ -39,6 +39,6 @@ find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
 # Run OS X system setup file last
 printf "\n› macOS system setup\n"
-"$DOTFILES_ROOT"/macos/system-setup.sh
+# "$DOTFILES_ROOT"/macos/system-setup.sh
 
 printf "\n› Done\n"
