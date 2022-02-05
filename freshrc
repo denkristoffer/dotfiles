@@ -5,6 +5,11 @@ fresh-options --file
   fresh config/\*
 fresh-options
 
+# Hammerspoon
+fresh-options --file=~/.hammerspoon --marker
+  fresh config/hammerspoon/\*
+fresh-options
+
 # GPG
 fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --marker
 fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
