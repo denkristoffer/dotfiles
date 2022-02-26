@@ -41,6 +41,10 @@ cask "little-snitch"
 cask "musicbrainz-picard"
 cask "paw"
 cask "plex"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "qlvideo"
+cask "quicklook-json"
 cask "resilio-sync"
 cask "selfcontrol"
 cask "sensiblesidebuttons"
@@ -71,9 +75,3 @@ mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Vinegar - Tube Cleaner", id: 1591303229
 mas "Yoink", id: 457622435
-
-# QuickLook plugins
-cask "qlmarkdown"
-cask "qlstephen"
-cask "qlvideo"
-cask "quicklook-json"
