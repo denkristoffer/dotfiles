@@ -67,7 +67,6 @@ mas "Gestimer", id: 990588172
 mas "iA Writer", id: 775737590
 mas "Internet Access Policy Viewer", id: 1482630322
 mas "Lungo", id: 1263070803
-mas "MindNode", id: 1289197285
 mas "Presentify", id: 1507246666
 mas "Refined GitHub", id: 1519867270
 mas "Simple Comic", id: 1497435571
