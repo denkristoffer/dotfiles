@@ -1,7 +1,7 @@
 alias brwe='brew'
 alias bbrew='brew'
 alias bbrwe='brew'
-alias reload!='source $HOME/.zshrc'
+alias reload!='exec zsh'
 alias reset!='clear && printf "\e[3J"' # https://askubuntu.com/a/473770
 
 hash -d books="$HOME/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks"
