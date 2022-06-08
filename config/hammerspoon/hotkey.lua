@@ -9,55 +9,57 @@ function openApp(name)
 end
 
 -- 1Password autofill
-hyper:bind({}, '1', function()
-  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '1')
+hyper:bind({}, 'p', function()
   hyper.triggered = true
+  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'p')
 end)
 
 -- Alfred
 hyper:bind({}, 'space', function()
-  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
   hyper.triggered = true
+  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
 end)
 
 -- iA Writer
 hyper:bind({}, 'w', function()
-  openApp('pro.writer.mac')
   hyper.triggered = true
+  openApp('pro.writer.mac')
 end)
 
 -- iTerm
 hs.hotkey.bind({}, 'f18', function()
   if not hyper.triggered then
     hs.eventtap.keyStroke({}, '$')
+    hyper.triggered = true
   end
 end)
 
 hyper:bind({}, 'f18', function()
-  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '$')
   hyper.triggered = true
+  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '$')
 end)
 
 -- Messages
 hyper:bind({}, 'm', function()
-  openApp('com.apple.MobileSMS')
   hyper.triggered = true
+  openApp('com.apple.MobileSMS')
 end)
 
 -- Safari
 hyper:bind({}, 's', function()
-  openApp('com.apple.Safari')
   hyper.triggered = true
+  openApp('com.apple.Safari')
 end)
 
 -- Things
 hyper:bind({}, 't', function()
-  openApp('com.culturedcode.ThingsMac')
   hyper.triggered = true
+  openApp('com.culturedcode.ThingsMac')
 end)
 
 hyper:bind({'cmd'}, 't', function()
   local app = hs.application.get(name)
+  hyper.triggered = true
 
   if app then
     hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 't')
@@ -65,17 +67,16 @@ hyper:bind({'cmd'}, 't', function()
     openApp('com.culturedcode.ThingsMac')
     hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 't')
   end
-  hyper.triggered = true
 end)
 
 -- Toggle Dock
 hyper:bind({}, 'd', function()
-  hs.eventtap.keyStroke({'cmd','alt'}, 'd')
   hyper.triggered = true
+  hs.eventtap.keyStroke({'cmd','alt'}, 'd')
 end)
 
 -- VS Code
 hyper:bind({}, 'c', function()
-  openApp('com.microsoft.VSCode')
   hyper.triggered = true
+  openApp('com.microsoft.VSCode')
 end)
