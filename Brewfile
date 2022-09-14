@@ -9,7 +9,7 @@ brew "fnm"
 brew "git"
 brew "mas"
 brew "thefuck"
-brew "youtube-dl"
+brew "yt-dlp/taps/yt-dlp"
 brew "z"
 brew "zsh"
 
