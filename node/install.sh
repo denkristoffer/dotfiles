@@ -5,11 +5,15 @@ then
   printf "\n› Installing Node\n"
 
   # Finish fnm setup
-  eval "$(fnm env --multi)"
+  eval "$(fnm env)"
 
-  # Node v12
-  fnm install lts/erbium
-  fnm use lts/erbium
+  # Node LTS
+  fnm install lts-latest
+  fnm use lts-latest
+
+  # Package managers
+  corepack enable
+  corepack prepare --activate yarn@1.22.15
 
   fnm completions --shell zsh > ~/.fresh/build/completion/_fnm
 fi
