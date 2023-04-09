@@ -8,6 +8,11 @@ function openApp(name)
   end
 end
 
+-- Open Apple Music
+hs.hotkey.bind({'cmd','alt'}, 'return', function()
+  openApp('com.apple.Music')
+end)
+
 -- 1Password autofill
 hyper:bind({}, 'p', function()
   hyper.triggered = true
