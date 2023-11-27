@@ -4,10 +4,10 @@
 
 printf "\n› Setting up zsh\n"
 
-if ! [[ $SHELL == "/usr/local/bin/zsh" ]]
+if ! [[ $SHELL == "$HOMEBREW_PREFIX/bin/zsh" ]]
 then
-  sudo sh -c "sudo printf \"/usr/local/bin/zsh\n\" >> /etc/shells"
-  chsh -s /usr/local/bin/zsh
+  sudo sh -c "sudo printf \"$HOMEBREW_PREFIX/bin/zsh\n\" >> /etc/shells"
+  chsh -s $HOMEBREW_PREFIX/bin/zsh
 fi
 
 # Install oh-my-zsh

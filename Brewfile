@@ -1,7 +1,6 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
-tap "homebrew/cask"
 
 # Formulas
 brew "bat"
@@ -10,16 +9,14 @@ brew "git"
 brew "mas"
 brew "rustup-init"
 brew "thefuck"
-brew "yt-dlp/taps/yt-dlp"
+brew "yt-dlp"
 brew "z"
 brew "zsh"
 
 # Applications
 cask "1password"
-cask "alfred"
 cask "appcleaner"
-cask "ballast"
-cask "bartender"
+cask "balance-lock"
 cask "carbon-copy-cloner"
 cask "cookie"
 cask "daisydisk"
@@ -38,7 +35,6 @@ cask "iterm2"
 cask "karabiner-elements"
 cask "little-snitch"
 cask "musicbrainz-picard"
-cask "paw"
 cask "plex"
 cask "qlmarkdown"
 cask "qlstephen"
@@ -46,22 +42,17 @@ cask "qlvideo"
 cask "quicklook-json"
 cask "resilio-sync"
 cask "selfcontrol"
-# cask "sensiblesidebuttons"
 cask "signal"
-cask "slack"
+cask "sonos"
 # cask "there"
-cask "viscosity"
 cask "visual-studio-code"
 cask "xld"
-
-cask "homebrew/cask-drivers/sonos"
 
 # Mac App Store
 mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Black Out", id: 1319884285
 mas "Dark Reader for Safari", id: 1438243180
-mas "Deliveries", id: 290986013
 mas "Gestimer", id: 990588172
 mas "iA Writer", id: 775737590
 mas "Internet Access Policy Viewer", id: 1482630322
