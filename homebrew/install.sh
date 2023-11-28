@@ -6,7 +6,8 @@ if test ! $(which brew)
 then
   printf "\n› Installing Homebrew\n"
 
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null &> /tmp/homebrew-install.log
+  NOINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null &> /tmp/homebrew-install.log
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew analytics off
