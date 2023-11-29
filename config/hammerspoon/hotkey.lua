@@ -19,7 +19,7 @@ hyper:bind({}, 'p', function()
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'p')
 end)
 
--- Alfred
+-- Raycast
 hyper:bind({}, 'space', function()
   hyper.triggered = true
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
@@ -31,17 +31,10 @@ hyper:bind({}, 'w', function()
   openApp('pro.writer.mac')
 end)
 
--- iTerm
-hs.hotkey.bind({}, 'f18', function()
-  if not hyper.triggered then
-    hs.eventtap.keyStroke({}, '$')
-    hyper.triggered = true
-  end
-end)
-
-hyper:bind({}, 'f18', function()
+-- iTerm hotkey window
+hyper:bind({}, '`', function()
   hyper.triggered = true
-  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '$')
+  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '`')
 end)
 
 -- Messages
