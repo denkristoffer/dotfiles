@@ -22,7 +22,7 @@ The system still requires some manual setup after running.
 Set name, email and signing key with the following local git config:
 
 - `git config -f ~/.gitconfig.local user.name "John Appleseed"`
-- `git config -f ~/.gitconfig.local user.email me@example.com`
+- `git config -f ~/.gitconfig.local user.email me@users.noreply.github.com`
 - `git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2`
 
-Move SSH keys and GPG keys.
+Move GPG keys into MacGPG.
