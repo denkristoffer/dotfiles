@@ -19,10 +19,11 @@ Based on/stolen from:
 
 The system still requires some manual setup after running.
 
-Set name, email and signing key with the following local git config:
+Set name and email with the following local git config:
 
 - `git config -f ~/.gitconfig.local user.name "John Appleseed"`
 - `git config -f ~/.gitconfig.local user.email me@users.noreply.github.com`
-- `git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2`
 
-Move GPG keys into MacGPG.
+Move GPG keys into MacGPG and get the signing key with `gpg --list-secret-keys --keyid-format=long`
+
+- `git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2`
