@@ -3,7 +3,6 @@ cask_args appdir: "/Applications"
 tap "homebrew/bundle"
 
 # Formulas
-brew "1password-cli"
 brew "bat"
 brew "fnm"
 brew "git"
@@ -16,6 +15,7 @@ brew "zsh"
 
 # Applications
 cask "1password"
+cask "1password-cli"
 cask "appcleaner"
 cask "balance-lock"
 cask "carbon-copy-cloner"
