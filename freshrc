@@ -8,10 +8,6 @@ fresh-options
 fresh config/config --file=~/.config/
 fresh config/hammerspoon --file=~/.hammerspoon/
 
-# GPG
-fresh config/gnupg/gpg-agent.conf --file=~/.gnupg/gpg-agent.conf --marker
-fresh config/gnupg/gpg.conf --file=~/.gnupg/gpg.conf
-
 # SSH
 fresh-options --file=~/.ssh/config --marker
   fresh config/ssh/config

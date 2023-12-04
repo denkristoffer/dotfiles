@@ -1,7 +1,7 @@
 # Set your name, email and signing key with the following:
 #   git config -f ~/.gitconfig.local user.name "John Appleseed"
 #   git config -f ~/.gitconfig.local user.email me@example.com
-#   git config -f ~/.gitconfig.local user.signingkey 3AA5C34371567BD2
+#   git config -f ~/.gitconfig.local user.signingkey "ssh-ed25519 ..."
 
 [include]
   path = .gitconfig.local
@@ -22,7 +22,10 @@
   required = true
 
 [gpg]
-  program = /usr/local/MacGPG2/bin/gpg
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [pull]
   ff = only
