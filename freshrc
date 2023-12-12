@@ -5,8 +5,15 @@ fresh-options --file
   fresh config/\*
 fresh-options
 
+# .config directory
 fresh config/config --file=~/.config/
 fresh config/hammerspoon --file=~/.hammerspoon/
+
+# Git
+fresh-options --file=~/.gitconfig --marker
+  fresh config/git/gitconfig
+  fresh config/git/gitconfig.local --ignore-missing
+fresh-options
 
 # SSH
 fresh-options --file=~/.ssh/config --marker
