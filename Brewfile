@@ -10,7 +10,6 @@ brew "mas"
 brew "rustup-init"
 brew "thefuck"
 brew "yt-dlp"
-brew "z"
 brew "zsh"
 
 # Applications
