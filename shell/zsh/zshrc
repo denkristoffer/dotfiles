@@ -9,7 +9,11 @@ plugins=(git yarn history-substring-search thefuck z)
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 # Homebrew
-eval "$(/usr/local/bin/brew shellenv)"
+if [[ $(sysctl -n machdep.cpu.brand_string) == "Apple M"* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # fnm
 eval "$(fnm env)"
