@@ -24,8 +24,8 @@ eval $(thefuck --alias fuck)
 # rust
 # . "$HOME/.cargo/env"
 
-# https://github.com/ohmyzsh/ohmyzsh/issues/12328#issuecomment-2043492331
-zstyle ':omz:alpha:lib:git' async-prompt no
+# https://github.com/ohmyzsh/ohmyzsh/issues/12328#issuecomment-2400576507
+zstyle ':omz:alpha:lib:git' async-prompt force
 
 # oh-my-zsh last to allow for plugins to use what we've set up above
 . $ZSH/oh-my-zsh.sh
