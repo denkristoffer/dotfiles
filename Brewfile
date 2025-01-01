@@ -49,6 +49,7 @@ mas "1Blocker", id: 1365531024
 mas "1Password for Safari", id: 1569813296
 mas "Dark Reader for Safari", id: 1438243180
 mas "iA Writer", id: 775737590
+mas "Kagi for Safari", id: 1622835804
 mas "Lungo", id: 1263070803
 mas "Refined GitHub", id: 1519867270
 mas "Simple Comic", id: 1497435571
