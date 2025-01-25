@@ -21,9 +21,6 @@ eval "$(fnm env)"
 # thefuck
 eval $(thefuck --alias fuck)
 
-# rustup
-$(brew --prefix rustup)/bin
-
 # https://github.com/ohmyzsh/ohmyzsh/issues/12328#issuecomment-2400576507
 zstyle ':omz:alpha:lib:git' async-prompt force
 

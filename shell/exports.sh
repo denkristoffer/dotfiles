@@ -15,4 +15,5 @@ export HOMEBREW_AUTO_UPDATE_SECS=259200
 export NEXT_TELEMETRY_DISABLED=1
 
 path_add "/usr/local/sbin"
+path_add "$(brew --prefix rustup)/bin"
 
