@@ -1,6 +1,4 @@
 alias brwe='brew'
-alias bbrew='brew'
-alias bbrwe='brew'
 alias reload!='exec zsh'
 alias reset!='clear && printf "\e[3J"' # https://askubuntu.com/a/473770
 
