@@ -14,9 +14,4 @@ export HOMEBREW_AUTO_UPDATE_SECS=259200
 # Disable Next.js telemetry globally
 export NEXT_TELEMETRY_DISABLED=1
 
-# oh-my-zsh
-DISABLE_AUTO_UPDATE="true"
-# DISABLE_MAGIC_FUNCTIONS="true"
-# DISABLE_COMPFIX="true"
-
 path_add "$(brew --prefix rustup)/bin"

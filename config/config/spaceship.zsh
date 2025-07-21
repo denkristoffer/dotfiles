@@ -1,0 +1,4 @@
+# Spaceship prompt
+SPACESHIP_PROMPT_ASYNC=true
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+

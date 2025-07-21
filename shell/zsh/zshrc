@@ -1,10 +1,13 @@
+# oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/issues/11111#issuecomment-1686666703
 ZSH_DISABLE_COMPFIX=true
-# oh-my-zsh
+DISABLE_AUTO_UPDATE=true
+# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
 # $ZSH/themes/ and $ZSH/plugins/
-ZSH_THEME="denkristoffer"
 plugins=(git yarn history-substring-search thefuck z)
+# ZSH_THEME="denkristoffer"
 
 export ZSH_COMPDUMP="${ZSH_CACHE_DIR}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
@@ -14,6 +17,12 @@ if [[ $(sysctl -n machdep.cpu.brand_string) == "Apple M"* ]]; then
 else
   eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+# Spaceship prompt -- https://github.com/spaceship-prompt/spaceship-prompt
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
+
+# zsh-autosuggestions -- https://github.com/zsh-users/zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # fnm
 eval "$(fnm env)"
@@ -25,4 +34,4 @@ eval $(thefuck --alias fuck)
 zstyle ':omz:alpha:lib:git' async-prompt force
 
 # oh-my-zsh last to allow for plugins to use what we've set up above
-. $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh

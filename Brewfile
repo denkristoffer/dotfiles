@@ -8,9 +8,11 @@ brew "fnm"
 brew "git"
 brew "mas"
 brew "rustup"
+brew "spaceship"
 brew "thefuck"
 brew "yt-dlp"
 brew "zsh"
+brew "zsh-autosuggestions"
 
 # Applications
 cask "1password"
