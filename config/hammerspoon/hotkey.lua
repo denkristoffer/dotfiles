@@ -25,12 +25,6 @@ hyper:bind({}, 'space', function()
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
 end)
 
--- iA Writer
-hyper:bind({}, 'w', function()
-  hyper.triggered = true
-  openApp('pro.writer.mac')
-end)
-
 -- iTerm hotkey window
 hyper:bind({}, '`', function()
   hyper.triggered = true
