@@ -43,6 +43,12 @@ hyper:bind({}, 'm', function()
   openApp('com.apple.MobileSMS')
 end)
 
+-- Notes
+hyper:bind({}, 'n', function()
+  hyper.triggered = true
+  openApp('com.apple.Notes')
+end)
+
 -- Safari
 hyper:bind({}, 's', function()
   hyper.triggered = true
