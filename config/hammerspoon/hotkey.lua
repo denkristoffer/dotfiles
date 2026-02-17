@@ -19,7 +19,7 @@ hyper:bind({}, 'p', function()
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'p')
 end)
 
--- Raycast
+-- Launcher
 hyper:bind({}, 'space', function()
   hyper.triggered = true
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
