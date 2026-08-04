@@ -10,7 +10,6 @@ brew "mas"
 brew "mise"
 brew "rustup"
 brew "spaceship"
-brew "thefuck"
 brew "worktrunk"
 brew "yt-dlp"
 brew "z"
@@ -60,7 +59,6 @@ mas "Lungo", id: 1263070803
 mas "Refined GitHub", id: 1519867270
 mas "Simple Comic", id: 1497435571
 mas "Tailscale", id: 1475387142
-mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Vinegar", id: 1591303229
 mas "Yoink", id: 457622435

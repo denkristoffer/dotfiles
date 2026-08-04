@@ -30,8 +30,6 @@ bindkey '^[[B' history-substring-search-down
 # fnm
 eval "$(fnm env)"
 
-# thefuck
-eval $(thefuck --alias fck)
 # mise
 eval "$(mise activate zsh)"
 
