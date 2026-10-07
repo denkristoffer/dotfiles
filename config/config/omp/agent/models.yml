@@ -1,0 +1,14 @@
+# oh-my-pi model configuration
+#
+# Models are discovered from the LiteLLM-compatible gateway at runtime. Keep
+# the endpoint and API key in the shell environment rather than committing
+# them here.
+providers:
+  litellm:
+    apiKey: LITELLM_API_KEY
+    api: openai-completions
+    compat:
+      # The gateway does not use OpenAI's stateful response storage field.
+      supportsStore: false
+    discovery:
+      type: litellm

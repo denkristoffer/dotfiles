@@ -37,6 +37,7 @@ fresh-options
 # Shell
 fresh shell/aliases/\*
 fresh shell/exports.sh
+fresh shell/exports.sh.local --ignore-missing
 
 fresh_after_build() {
   if [ -n "$DOTFILES_SKIP_BOOTSTRAP" ]; then

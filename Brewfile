@@ -1,6 +1,7 @@
 cask_args appdir: "/Applications"
 
 tap "homebrew/bundle"
+tap "can1357/tap"
 
 # Formulas
 brew "bat"
@@ -8,6 +9,7 @@ brew "fnm"
 brew "git"
 brew "mas"
 brew "mise"
+brew "omp"
 brew "rustup"
 brew "spaceship"
 brew "worktrunk"
