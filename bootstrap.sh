@@ -34,8 +34,8 @@ printf "\n› brew bundle\n"
 sudo -K
 brew bundle
 
-# Find the installers and run them one at a time
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+# Find the installers and run them one at a time (Homebrew is already handled above)
+find . -name install.sh -not -path './homebrew/*' | while read installer ; do sh -c "${installer}" ; done
 
 # Run OS X system setup file last
 printf "\n› macOS system setup\n"
