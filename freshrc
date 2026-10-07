@@ -40,7 +40,7 @@ fresh shell/exports.sh
 fresh shell/exports.sh.local --ignore-missing
 
 fresh_after_build() {
-  if [ -n "$DOTFILES_SKIP_BOOTSTRAP" ]; then
+  if [ -n "${DOTFILES_SKIP_BOOTSTRAP:-}" ]; then
     printf "\n› Skipping bootstrap (DOTFILES_SKIP_BOOTSTRAP is set)\n"
     return 0
   fi
