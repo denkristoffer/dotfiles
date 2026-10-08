@@ -16,6 +16,29 @@ fi
 # Spaceship prompt -- https://github.com/spaceship-prompt/spaceship-prompt
 source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
+# Work around https://github.com/mafredri/zsh-async/issues/70 ("No handler
+# installed for fd N"): only remove the ZLE handler if one is installed.
+async_stop_worker() {
+  setopt localoptions noshwordsplit
+
+  local ret=0 worker k v
+  for worker in $@; do
+    for k v in ${(@kv)ASYNC_PTYS}; do
+      if [[ $v == $worker ]]; then
+        zle -F -L $k &>/dev/null && zle -F $k
+        unset "ASYNC_PTYS[$k]"
+      fi
+    done
+    async_unregister_callback $worker
+    zpty -d $worker 2>/dev/null || ret=$?
+
+    typeset -gA ASYNC_PROCESS_BUFFER
+    unset "ASYNC_PROCESS_BUFFER[$worker]"
+  done
+
+  return $ret
+}
+
 # z -- https://github.com/rupa/z
 source $(brew --prefix)/etc/profile.d/z.sh
 
