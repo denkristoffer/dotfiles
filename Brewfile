@@ -41,7 +41,6 @@ cask "karabiner-elements"
 # cask "musicbrainz-picard" -- Rosetta
 cask "plex"
 cask "portfolioperformance"
-cask "raycast"
 cask "qlmarkdown"
 cask "qlstephen"
 cask "quicklook-json"
