@@ -58,7 +58,6 @@ mas "iA Writer", id: 775737590
 mas "Kagi for Safari", id: 1622835804
 mas "Lungo", id: 1263070803
 mas "Refined GitHub", id: 1519867270
-mas "Simple Comic", id: 1497435571
 mas "Tailscale", id: 1475387142
 mas "Things", id: 904280696
 mas "Vinegar", id: 1591303229
