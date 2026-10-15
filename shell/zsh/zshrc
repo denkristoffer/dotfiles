@@ -56,6 +56,11 @@ eval "$(fnm env)"
 # mise
 eval "$(mise activate zsh)"
 
+# omp
+if command -v omp >/dev/null 2>&1; then
+  eval "$(omp completions zsh)"
+fi
+
 # zsh-syntax-highlighting -- https://github.com/zsh-users/zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
