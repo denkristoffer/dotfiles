@@ -1,0 +1,55 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "providers": {
+    "litellm": {
+      "package": "@opencode/ai/providers/openai-compatible",
+      "name": "LiteLLM",
+      "settings": {
+        "baseURL": "{env:LITELLM_BASE_URL}",
+        "apiKey": "{env:LITELLM_API_KEY}"
+      },
+      // Required for the gateway's Bedrock Claude routes.
+      "body": { "store": null }
+    }
+  },
+  "plugins": [
+    "opencode-plugin-litellm@1.4.1"
+  ],
+  "mcp": {
+    "servers": {
+      "gateway": {
+        "type": "remote",
+        "url": "{env:LITELLM_MCP_URL}",
+        "oauth": false,
+        "headers": {
+          "Authorization": "Bearer {env:LITELLM_API_KEY}"
+        }
+      },
+      "chrome-devtools": {
+        "disabled": true,
+        "type": "local",
+        "command": ["npx", "chrome-devtools-mcp@latest", "--headless=false", "--no-usage-statistics", "--autoConnect"]
+      },
+      "figma": {
+        "disabled": true,
+        "type": "remote",
+        "url": "https://mcp.figma.com/mcp",
+        "oauth": {
+          "client_id": "{env:FIGMA_CLIENT_ID}",
+          "client_secret": "{env:FIGMA_CLIENT_SECRET}"
+        },
+      },
+      "figma-desktop": {
+        "disabled": true,
+        "type": "remote",
+        "url": "http://127.0.0.1:3845/mcp",
+      },
+      "glean": {
+        "disabled": true,
+        "type": "remote",
+        "url": "{env:GLEAN_MCP_URL}",
+        "oauth": {},
+      }
+    },
+  },
+}
