@@ -6,10 +6,20 @@
       "name": "LiteLLM",
       "settings": {
         "baseURL": "{env:LITELLM_BASE_URL}",
-        "apiKey": "{env:LITELLM_API_KEY}"
+        "apiKey": "{env:LITELLM_API_KEY}",
+        "excludeModels": ["claude-*"]
       },
       // Required for the gateway's Bedrock Claude routes.
       "body": { "store": null }
+    },
+    "litellm-anthropic": {
+      "package": "@ai-sdk/anthropic",
+      "name": "LiteLLM Anthropic",
+      "settings": {
+        "baseURL": "{env:LITELLM_BASE_URL}",
+        "apiKey": "{env:LITELLM_API_KEY}",
+        "includeModels": ["claude-*"]
+      }
     }
   },
   "plugins": [
