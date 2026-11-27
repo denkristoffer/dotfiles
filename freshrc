@@ -8,6 +8,7 @@ fresh-options
 # .config directory
 fresh config/config --file=~/.config/
 fresh config/hammerspoon --file=~/.hammerspoon/
+fresh config/agents/skills --file=~/.agents/skills/
 
 # Git
 fresh-options --file=~/.gitconfig --marker
@@ -39,7 +40,47 @@ fresh shell/aliases/\*
 fresh shell/exports.sh
 fresh shell/exports.sh.local --ignore-missing
 
+fresh_agents_link() {
+  fresh_agents_source="$FRESH_LOCAL/config/agents/AGENTS.md"
+
+  # The source file is managed by Fresh. Do nothing if the config has not
+  # been installed yet.
+  if [ ! -f "$fresh_agents_source" ]; then
+    return 0
+  fi
+
+  for fresh_agents_config_dir in \
+    "$HOME/.config/opencode" \
+    "$HOME/.codex" \
+    "$HOME/.claude"
+  do
+    # Do not create config directories for tools that are not installed.
+    if [ ! -d "$fresh_agents_config_dir" ]; then
+      continue
+    fi
+
+    fresh_agents_target="$fresh_agents_config_dir/AGENTS.md"
+
+    if [ -L "$fresh_agents_target" ]; then
+      if [ "$(readlink "$fresh_agents_target")" = "$fresh_agents_source" ]; then
+        continue
+      fi
+
+      # A stale symlink can be safely replaced; preserve regular files below.
+      rm "$fresh_agents_target"
+    elif [ -e "$fresh_agents_target" ]; then
+      printf "\n› Skipping %s (already exists and is not a symlink)\n" \
+        "$fresh_agents_target" >&2
+      continue
+    fi
+
+    ln -s "$fresh_agents_source" "$fresh_agents_target"
+  done
+}
+
 fresh_after_build() {
+  fresh_agents_link
+
   if [ -n "${DOTFILES_SKIP_BOOTSTRAP:-}" ]; then
     printf "\n› Skipping bootstrap (DOTFILES_SKIP_BOOTSTRAP is set)\n"
     return 0
