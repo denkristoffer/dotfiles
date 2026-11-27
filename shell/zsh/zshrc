@@ -39,6 +39,33 @@ async_stop_worker() {
   return $ret
 }
 
+# Spaceship restarts its async worker on every prompt, and each start needs a
+# new pseudo terminal. When none can be opened (e.g. when the system-wide
+# kern.tty.ptmx_max limit is exhausted), upstream still evals in the missing
+# worker and prints errors on every prompt. Fall back to rendering the prompt
+# synchronously instead, and retry the worker on the next prompt.
+typeset -gi _spaceship_worker_unavailable=0
+
+spaceship::worker::init() {
+  if (( _spaceship_worker_unavailable )); then
+    _spaceship_worker_unavailable=0
+    SPACESHIP_PROMPT_ASYNC=true
+  fi
+  spaceship::is_prompt_async || return
+
+  SPACESHIP_JOBS=()
+  async_stop_worker "spaceship"
+  if ! async_start_worker "spaceship" -n -u 2>/dev/null; then
+    _spaceship_worker_unavailable=1
+    SPACESHIP_PROMPT_ASYNC=false
+    return
+  fi
+  # setopt before call register to avoid callback by async_worker_eval
+  async_worker_eval "spaceship" setopt extendedglob
+  async_worker_eval "spaceship" spaceship::worker::renice
+  async_register_callback "spaceship" spaceship::core::async_callback
+}
+
 # z -- https://github.com/rupa/z
 source $(brew --prefix)/etc/profile.d/z.sh
 
