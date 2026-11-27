@@ -1,0 +1,9 @@
+# Ghostty configuration
+# Docs: https://ghostty.org/docs/config
+# Defaults: ghostty +show-config --default --docs
+
+# Quick terminal (Hyper + `)
+# Hammerspoon turns Caps Lock + ` into Hyper + F18, see hammerspoon/hotkey.lua.
+# The backquote bind comes last so the menu item shows it.
+keybind = global:ctrl+alt+shift+cmd+f18=toggle_quick_terminal
+keybind = global:ctrl+alt+shift+cmd+backquote=toggle_quick_terminal

@@ -25,10 +25,12 @@ hyper:bind({}, 'space', function()
   hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'space')
 end)
 
--- iTerm hotkey window
+-- Ghostty quick terminal. Sends F18 instead of ` because macOS doesn't deliver
+-- a re-posted key to the frontmost app while that same key is still held down
+-- for this binding, so Ghostty would miss it whenever it has focus.
 hyper:bind({}, '`', function()
   hyper.triggered = true
-  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, '`')
+  hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, 'f18')
 end)
 
 -- Messages
